@@ -13,19 +13,19 @@ public class EmployeeComputation {
     @Override
     public String toString() {
         return "EmployeeWageComputation{" +
-                "isPartTime=" + isPartTime +
-                ", isFullTime=" + isFullTime +
-                ", wagePerHour=" + wagePerHour +
-                ", numWorkingDays=" + numWorkingDays +
-                ", maxHours=" + maxHours +
+                "\nPartTime=" + isPartTime +
+                ",FullTime=" + isFullTime +
+                ",WagePerHour=" + wagePerHour +
+                ",WorkingDays=" + numWorkingDays +
+                ",MaxHours=" + maxHours +
                 '}';
     }
 
     public static void main(String[] args) {
-        EmployeeComputation employee = new EmployeeComputation();
-        System.out.println("\n" + employee);
+        EmployeeComputation e = new EmployeeComputation();
+        System.out.println("\n" + e);
         System.out.println();
-        display(calculateSalary(employee));
+        display(Calculatesal(e));
 
     }
 
@@ -42,17 +42,11 @@ public class EmployeeComputation {
 
     }
 
-    public static int[] calculateSalary(EmployeeComputation employee) {
-
-        //Declaring the variables.
-        final int isPartTime = 1;
-        final int isFullTime = 2;
-        //Declaring the variables
+    public static int[] Calculatesal(EmployeeComputation employee) {
         int randomCheck = 0;
         int empHour=8;
         int wagePerHour = 20;
         int salary = 0;
-        int numWorkingDays = 20;
         int monthlySalary = 0;
         int maxHours = 100;
         int totalWorkingHours = 0;
@@ -81,25 +75,25 @@ public class EmployeeComputation {
         if (randomCheck == 0) {
             System.out.println("Employee is absent");
             empHour = 0;
-            salary = empHour * employee.wagePerHour;
+            salary = empHour * wagePerHour;
         } else if (randomCheck == employee.isPartTime) {
 
             System.out.println("Employee is part-time");
             int partTimeHour = 4;
             empHour = partTimeHour;
-            salary = empHour * employee.wagePerHour;
+            salary = empHour * wagePerHour;
         } else {
             System.out.println("Employee is full-time");
             int fullTimeHour = 8;
             empHour = fullTimeHour;
-            salary = empHour * employee.wagePerHour;
+            salary = empHour * wagePerHour;
         }
         monthlySalary += salary;
         totalWorkingHours += empHour;
 
 
-        int[] employeeData = {monthlySalary, totalWorkingDays, totalWorkingHours};
-        return employeeData;
+        int[] emp = {monthlySalary, totalWorkingDays, totalWorkingHours};
+        return emp;
 
 
             }
