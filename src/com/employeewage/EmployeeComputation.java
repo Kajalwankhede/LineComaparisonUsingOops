@@ -48,9 +48,6 @@ public class EmployeeComputation {
 
     }
 
-
-    /*Calculating the number of working days of an Employee randomly unless it satisfies the condition
-          of total working hours or days is reached for a month.*/
     public static int[] calculateSalary(EmployeeComputation employee) {
 
         //Declaring the variables.
@@ -67,8 +64,6 @@ public class EmployeeComputation {
         int totalWorkingHours = 0;
         int totalWorkingDays = 0;
 
-        /*Calculating the number of working days of an Employee randomly unless it satisfies the condition
-          of total working hours or days is reached for a month.*/
             while (totalWorkingDays < employee.numWorkingDays && totalWorkingHours < employee.maxHours) {
                 totalWorkingDays++;
                 randomCheck = (int) Math.floor((Math.random() * 10) % 3);
