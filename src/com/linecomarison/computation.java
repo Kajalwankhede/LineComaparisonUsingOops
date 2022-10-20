@@ -19,10 +19,9 @@ public class computation {
         System.out.println("\nLength of the first line: " + LengthFirstLine);
         System.out.println("Length of second line: " + LengthSecondLine);
 
-
         Boolean equality = Check_Equality(LengthFirstLine, LengthSecondLine); //Checking Equality of two lines
         if (equality == true)
-            System.out.println("Lines Are Equal");
+            System.out.println("Lines Are Equal.");
         else
             System.out.println("Lines are not equal\n");
 
